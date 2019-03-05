@@ -1,0 +1,151 @@
+{
+	"invocation": "i know",
+	"intents": [
+		{
+			"name": "WelcomeIntent",
+			"phrases": [
+				"welcome"
+			],
+			"inputs": []
+		},
+		{
+			"name": "ActionIntent",
+			"phrases": [
+				"{QuestionPrefix} {Action} for {City}",
+				"{QuestionPrefix} {Action} for {State}",
+				"{QuestionPrefix} {Action} for {Country}",
+				"{Action} for {Country}",
+				"{Action} for {State}",
+				"{Action} for {City}"
+			],
+			"inputs": [
+				{
+					"name": "Action",
+					"type": "Action"
+				},
+				{
+					"name": "Country",
+					"type": {
+						"alexa": "AMAZON.Country"
+					}
+				},
+				{
+					"name": "State",
+					"type": {
+						"alexa": "AMAZON.US_STATE"
+					}
+				},
+				{
+					"name": "City",
+					"type": {
+						"alexa": "AMAZON.US_CITY"
+					}
+				},
+				{
+					"name": "QuestionPrefix",
+					"type": "QuestionPrefix"
+				}
+			]
+		}
+	],
+	"inputTypes": [
+		{
+			"name": "Action",
+			"values": [
+				{
+					"value": "Top performer",
+					"synonyms": [
+						"best performer",
+						"lead performer",
+						"leading"
+					],
+					"id": "6"
+				},
+				{
+					"value": "ProfitLoss",
+					"synonyms": [
+						"profit or loss",
+						"loss",
+						"profit"
+					],
+					"id": "5"
+				},
+				{
+					"value": "Underwriting Costs",
+					"synonyms": [
+						"underwriting expenditure",
+						"underwriting expenses"
+					],
+					"id": "4"
+				},
+				{
+					"value": "Expenses",
+					"synonyms": [
+						"expense",
+						"total expenses"
+					],
+					"id": "3"
+				},
+				{
+					"value": "claim costs",
+					"synonyms": [
+						"claims",
+						"payments",
+						"claim payments"
+					],
+					"id": "2"
+				},
+				{
+					"value": "Policy Revenues",
+					"synonyms": [
+						"total income",
+						"income",
+						"revenues",
+						"total policy revenues"
+					],
+					"id": "1"
+				}
+			]
+		},
+		{
+			"name": "QuestionPrefix",
+			"values": [
+				{
+					"value": "What",
+					"synonyms": [
+						"What are the ",
+						"how",
+						"how much",
+						"how much is ",
+						"what are",
+						"what is the "
+					]
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.NavigateHomeIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	}
+}

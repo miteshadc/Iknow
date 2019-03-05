@@ -1,0 +1,11 @@
+{
+    "translation": {
+      "welcome_speech": "hi welcome shashrikal",
+      "welcome_reprompt": "Welcome reprompt",
+      "WELCOME_ARRAY": [
+        "Welcome",
+        "Hey",
+        "Hello"
+      ]
+    }
+  }

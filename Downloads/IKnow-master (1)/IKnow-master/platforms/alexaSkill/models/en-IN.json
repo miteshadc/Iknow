@@ -1,0 +1,156 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "i know",
+			"types": [
+				{
+					"name": "Action",
+					"values": [
+						{
+							"id": "6",
+							"name": {
+								"value": "Top performer",
+								"synonyms": [
+									"best performer",
+									"lead performer",
+									"leading"
+								]
+							}
+						},
+						{
+							"id": "5",
+							"name": {
+								"value": "ProfitLoss",
+								"synonyms": [
+									"profit or loss",
+									"loss",
+									"profit"
+								]
+							}
+						},
+						{
+							"id": "4",
+							"name": {
+								"value": "Underwriting Costs",
+								"synonyms": [
+									"underwriting expenditure",
+									"underwriting expenses"
+								]
+							}
+						},
+						{
+							"id": "3",
+							"name": {
+								"value": "Expenses",
+								"synonyms": [
+									"expense",
+									"total expenses"
+								]
+							}
+						},
+						{
+							"id": "2",
+							"name": {
+								"value": "claim costs",
+								"synonyms": [
+									"claims",
+									"payments",
+									"claim payments"
+								]
+							}
+						},
+						{
+							"id": "1",
+							"name": {
+								"value": "Policy Revenues",
+								"synonyms": [
+									"total income",
+									"income",
+									"revenues",
+									"total policy revenues"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "QuestionPrefix",
+					"values": [
+						{
+							"id": null,
+							"name": {
+								"value": "What",
+								"synonyms": [
+									"What are the ",
+									"how",
+									"how much",
+									"how much is ",
+									"what are",
+									"what is the "
+								]
+							}
+						}
+					]
+				}
+			],
+			"intents": [
+				{
+					"name": "WelcomeIntent",
+					"samples": [
+						"welcome"
+					],
+					"slots": []
+				},
+				{
+					"name": "ActionIntent",
+					"samples": [
+						"{QuestionPrefix} {Action} for {City}",
+						"{QuestionPrefix} {Action} for {State}",
+						"{QuestionPrefix} {Action} for {Country}",
+						"{Action} for {Country}",
+						"{Action} for {State}",
+						"{Action} for {City}"
+					],
+					"slots": [
+						{
+							"name": "Action",
+							"type": "Action"
+						},
+						{
+							"name": "Country",
+							"type": "AMAZON.Country"
+						},
+						{
+							"name": "State",
+							"type": "AMAZON.Region"
+						},
+						{
+							"name": "City",
+							"type": "AMAZON.City"
+						},
+						{
+							"name": "QuestionPrefix",
+							"type": "QuestionPrefix"
+						}
+					]
+				},
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.NavigateHomeIntent",
+					"samples": []
+				}
+			]
+		}
+	}
+}
